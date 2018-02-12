@@ -1,6 +1,6 @@
 /// @description Update camera
 if instance_exists(oPlayer) follow = oPlayer;
-else if instance_exists(oPlayer_pre) follow = oPlayer_pre;
+else if instance_exists(oPlayerRevive) follow = oPlayerRevive;
 //Update destination
 if (instance_exists(follow))
 {
@@ -44,23 +44,4 @@ if (layer_exists("bg4"))
 {
 	layer_x("bg4",x/3);
 }
-/*
-if (layer_exists("bg1"))
-{
-	layer_x("bg1",follow.x/1.5);
-}
 
-if (layer_exists("bg2"))
-{
-	layer_x("bg2",follow.x/2);
-}
-if (layer_exists("bg3"))
-{
-	layer_x("bg3",follow.x/2.5);
-}
-
-if (layer_exists("bg4"))
-{
-	layer_x("bg4",follow.x/3);
-}
-*/

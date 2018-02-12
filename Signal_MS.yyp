@@ -138,7 +138,7 @@
             "Key": "4554b29a-8243-4b02-9f03-921b9100ef8c",
             "Value": {
                 "id": "db28c3f2-2bad-4fa5-bf7f-1359192e3bd1",
-                "resourcePath": "objects\\oPlayer_pre\\oPlayer_pre.yy",
+                "resourcePath": "objects\\oPlayerRevive\\oPlayerRevive.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "8267dec5-8ccc-4c98-b19b-54051305a11b",
+            "Value": {
+                "id": "6e1cd3f7-cb34-439e-ba2f-fb92d5da2828",
+                "resourcePath": "objects\\oPlayerDie\\oPlayerDie.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
             "Value": {
                 "id": "7ea808ec-0604-4423-86a6-cb5e154cfa9c",
@@ -284,6 +292,14 @@
                 "id": "b0cbf79f-e917-4267-ad98-0e7ad38b8f1b",
                 "resourcePath": "views\\87534600-3856-429f-8c00-4cbc4c7b9a73.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8ac075e9-f5e0-4e6a-b044-8fff2dfd6c70",
+            "Value": {
+                "id": "08bd4ac4-e3fb-420b-a32e-5f23b8bf73e3",
+                "resourcePath": "objects\\oDead\\oDead.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -452,6 +468,14 @@
                 "id": "7ddcbafe-d263-4a2f-a1ad-a87f60cdcfb8",
                 "resourcePath": "views\\d9ddd551-3a33-434a-83c5-b9a56d1f4faf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "da98e0ff-ceb2-4862-b945-760085f7feb2",
+            "Value": {
+                "id": "4c2477d2-51ac-41a2-84ea-e665c3bfbd5f",
+                "resourcePath": "sprites\\sDead\\sDead.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

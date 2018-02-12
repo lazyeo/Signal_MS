@@ -42,7 +42,7 @@ var move = key_right - key_left;
 if move == 0 
 {
 //线性减速
-	hsp = lerp(hsp,0,0.1)	
+	hsp = lerp(hsp,0,0.2)	
 } else 
 //横向移动
 hsp = move * walksp;
@@ -57,9 +57,10 @@ if (place_meeting(x,y+1,oWall)) && (key_jump)
 }
 
 //检测跳跃点碰撞起跳
-if (collision_circle(x,y,27,oJumpPoint,true,true)) && (key_jump)
+if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
 	vsp = -10;
+	image_speed = 1 ;
 }
 
 
@@ -88,42 +89,55 @@ if (place_meeting(x,y+vsp,oWall))
 	vsp = 0;
 }
 y = y + vsp;
+
+//死亡碰撞检测
+if (collision_circle(x,y,26,oDead,true,true))
+{
+	instance_create_depth(x,y,depth,oPlayerDie);
+	instance_destroy();
+}
 #endregion
 
 
 #region //动画控制
+
+if hascontrol{
+
 //如果脚下没有墙体则在空中，播放跳跃的精灵动画
 
-/*
 if (!place_meeting(x,y+1,oWall))
 {
 	sprite_index = sigma_jump_1_strip12;
-	if image_index == 11 image_speed = 0 ;
+	if image_index == 9 image_speed = 0 ;	//在最舒展的时候停止动画
+	
 }
 else
 {
-	if (sprite_index == sigma_jump_1_strip12) 
+	if (sprite_index == sigma_jump_1_strip12) //落地
 	{
-		audio_sound_pitch(snLanding,choose(0.8,1.0,1.2));
-		audio_play_sound(snLanding,4,false);	
+		image_speed = 1;						//恢复动画播放
+		if floor(image_index) == 11 image_speed = 0 ;	//到最后一帧后停止动画
 	}
-	image_speed = 1;
-	if (hsp == 0)
+	if (abs(hsp) < 1)								//没有横向速度
 	{
-		sprite_index = sigma_stop_strip16;
+		image_speed = 1;						
+		sprite_index = sigma_stop_strip16;		//设为静止动画
 	}
-	else if (abs(hsp) < 4 && abs(hsp) > 0)
+	else if (abs(hsp) < 4 && abs(hsp) > 0)		//线性减速刹车动画
 	{
+		image_speed = 1;						
 		sprite_index = sigma_break_strip12;
-		if image_index > 10 image_speed = 0 ;
+		if floor(image_index) == 7 image_speed = 0 ;
 	}
-	else
+	else										//普通跑动
 	{
+		image_speed = 1;						
 		sprite_index = sigma_run_strip8;
 	}
 	
 }
 
-if (hsp != 0) image_xscale = sign(hsp);
-*/
+if (hsp != 0) image_xscale = sign(hsp);			//根据运动朝向改变人物方向
+}
+
 #endregion
