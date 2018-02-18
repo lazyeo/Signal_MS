@@ -5,6 +5,6 @@ walksp = 4;			//步行速度
 controller = 0;		//0为键盘操作 1为手柄操作
 hascontrol = true;	//允许操作
 
-
-energy = 10 ;		//跳跃能量
+energy_max = 12;			//能量上限
+energy = energy_max ;		//跳跃能量
 

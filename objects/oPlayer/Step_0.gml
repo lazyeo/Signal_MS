@@ -57,12 +57,19 @@ if (place_meeting(x,y+1,oWall)) && (key_jump)
 }
 
 //检测跳跃点碰撞起跳
+if floor(energy) > 0 {
 if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
+	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -10;
 	image_speed = 1 ;
+	energy = energy - 1 ;		//消耗能量
+	
+	//临时销毁跳跃点
+	instance_create_depth(jump_.x,jump_.y,jump_.depth,jump_shade);
+	instance_destroy(jump_)
 }
-
+}
 
 
 #endregion
@@ -98,6 +105,8 @@ if (collision_circle(x,y,26,oDead,true,true))
 }
 #endregion
 
+
+energy = clamp(energy,0,12);
 
 #region //动画控制
 
