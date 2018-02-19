@@ -8,9 +8,9 @@
         "987bced4-a33c-4996-b611-9ed6f77b0b8e",
         "579f2a1a-fe5f-48f9-8608-07569b494357",
         "cce1a602-32a1-4e65-8810-b766854273cd",
-        "871c743b-a70d-4f91-84ed-5f88780d1178",
         "8d7781a2-1008-4a0a-b9f4-a1a78107bc54",
-        "a959f0aa-0174-4c66-9fa1-359d8957a68f"
+        "48c563e8-5b3f-42d7-8504-983e389541cd",
+        "11ea110a-6284-4dee-9fb4-18888dbfd3f5"
     ],
     "filterType": "GMSprite",
     "folderName": "sigma_animation",

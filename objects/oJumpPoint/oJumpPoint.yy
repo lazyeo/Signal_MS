@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "oJumpPoint",
     "eventList": [
-        
+        {
+            "id": "f6b16240-fb48-49dd-aa5a-1391025755f0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "0251808e-735b-468a-be62-b7ad0a73ab89"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
