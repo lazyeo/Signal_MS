@@ -11,7 +11,11 @@ if(!instance_exists(oPlayer))
 
 
 draw_energy = lerp(draw_energy,oPlayer.energy,0.25);
-draw_set_color(c_green)
+
+if (oPlayer.energy > oPlayer.energy_max/3)	draw_set_color(c_green);
+else if (oPlayer.energy > oPlayer.energy_max/6) draw_set_color(c_yellow);
+else draw_set_color(c_red);
+
 draw_rectangle_custom(x,y,307*draw_energy/oPlayer.energy_max,18,false)
 draw_set_color(c_white)
 

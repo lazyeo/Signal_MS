@@ -42,7 +42,7 @@ var move = key_right - key_left;
 if move == 0 
 {
 //线性减速
-	hsp = lerp(hsp,0,0.2)	
+	hsp = lerp(hsp,0,0.04)	
 } else 
 //横向移动
 hsp = move * walksp;
@@ -60,9 +60,9 @@ if (place_meeting(x,y+1,oWall)) && (key_jump)
 if floor(energy) > 0 {
 if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
+	image_speed = 1 ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -10;
-	image_speed = 1 ;
 	energy = energy - 1 ;		//消耗能量
 	
 	//临时销毁跳跃点
@@ -83,6 +83,7 @@ if (place_meeting(x+hsp,y,oWall))
 		x = x + sign(hsp);
 	}
 	hsp = 0;
+
 }
 x = x + hsp;
 
@@ -94,6 +95,7 @@ if (place_meeting(x,y+vsp,oWall))
 		y = y + sign(vsp);
 	}
 	vsp = 0;
+	energy = energy + 0.02	//缓慢恢复能量
 }
 y = y + vsp;
 
@@ -117,7 +119,7 @@ if hascontrol{
 if (!place_meeting(x,y+1,oWall))
 {
 	sprite_index = sigma_jump_1_strip12;
-	if image_index == 9 image_speed = 0 ;	//在最舒展的时候停止动画
+	if floor(image_index) == 9 image_speed = 0 ;	//在最舒展的时候停止动画
 	
 }
 else
@@ -147,6 +149,7 @@ else
 }
 
 if (hsp != 0) image_xscale = sign(hsp);			//根据运动朝向改变人物方向
+
 }
 
 #endregion

@@ -1,12 +1,11 @@
 /// @description Set up camera
-cam = view_camera[0];
-follow = oPlayer;
-buff = 32;
-view_w_half = camera_get_view_width(cam) * 0.5;
-view_h_half = camera_get_view_height(cam) * 0.5;
-xTo = xstart;
-yTo = ystart;
 
-shake_length = 0;
+follow = oPlayer;		//定义镜头追踪对象
+buff = 32;				//定义缓冲
+
+xTo = xstart;			//镜头移动目标坐标x
+yTo = ystart;			//进攻移动目标坐标y
+
+shake_length = 0;		
 shake_magnitude = 0;
 shake_remain = 0;
