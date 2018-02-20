@@ -1,5 +1,5 @@
 ///@func draw_rectangle_custom(x,y,length,width,alpha,outline);
-///@description 以给定坐标为原点绘制给定长宽的矩形
+///@description 以给定坐标为原点绘制给定长宽的矩形，后增加透明度属性
 ///@param x
 ///@param y
 ///@param length
