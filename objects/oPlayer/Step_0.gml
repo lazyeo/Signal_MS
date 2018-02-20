@@ -54,6 +54,10 @@ vsp = vsp + grv;
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -7;
+	with(oGame){
+	last_x = other.x
+	last_y = other.y
+	}
 }
 
 //检测跳跃点碰撞起跳
@@ -63,7 +67,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 	image_speed = 1 ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -10;
-	energy = energy - 1 ;		//消耗能量
+	energy = energy - 2 ;		//消耗能量
 	
 	//临时销毁跳跃点
 	instance_create_depth(jump_.x,jump_.y,jump_.depth,jump_shade);
