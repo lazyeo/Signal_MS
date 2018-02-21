@@ -1,10 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (switch_room = false)
+if (oGame.switch_room = false)
 {
 	room_goto(oGame.target_room);
-	switch_room = true;
+	oGame.switch_room = true;
 } else {
 	room_goto_previous();
-	switch_room = false;
+	oGame.switch_room = false;
 }
