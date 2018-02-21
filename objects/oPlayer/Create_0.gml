@@ -8,4 +8,7 @@ hascontrol = true;	//允许操作
 energy_max = 12;			//能量上限
 energy = energy_max ;		//跳跃能量
 
-switch_room = false ;	//是否切过场景
+if (instance_exists(oGame)){
+	oGame.last_x = x
+	oGame.last_y = y
+}
