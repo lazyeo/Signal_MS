@@ -1,7 +1,8 @@
 hsp = 0;			//横向移动速度
 vsp = 0;			//纵向移动速度
 grv = 0.3;			//重力加速度
-walksp = 4;			//步行速度
+walksp = 0.3;		//横向加速度
+sp_max = 4 ;		//最高速度
 controller = 0;		//0为键盘操作 1为手柄操作
 hascontrol = true;	//允许操作
 
