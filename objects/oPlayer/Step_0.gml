@@ -3,9 +3,11 @@
 if (hascontrol)	
 {
 	//检测键盘输入
-	key_left = keyboard_check(ord("A"));
-	key_right = keyboard_check(ord("D"));
+	key_left = keyboard_check(vk_left);
+	key_right = keyboard_check(vk_right);
 	key_jump = keyboard_check_pressed(vk_space); 
+	key_previous = keyboard_check_pressed(ord("A"));
+	key_next = keyboard_check_pressed(ord("D"))
 
 	if (key_left) || (key_right) || (key_jump)
 	{
@@ -22,6 +24,18 @@ if (hascontrol)
 	if (gamepad_button_check_pressed(0,gp_face1))
 	{
 		key_jump = 1;
+		controller = 1;
+	}
+	
+	if (gamepad_button_check_pressed(0,gp_shoulderl))
+	{
+		key_previous = 1;
+		controller = 1;
+	}
+	
+	if (gamepad_button_check_pressed(0,gp_shoulderr))
+	{
+		key_next = 1;
 		controller = 1;
 	}
 }
@@ -45,8 +59,8 @@ if move == 0
 	hsp = lerp(hsp,0,0.04)	
 } else 
 //横向移动
-hsp = move * walksp;
-
+hsp = hsp + walksp*move;
+hsp = clamp(hsp,-sp_max,sp_max);
 //纵向移动
 vsp = vsp + grv;
 
@@ -64,7 +78,7 @@ if (place_meeting(x,y+1,oWall)) && (key_jump)
 if floor(energy) > 0 {
 if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
-	image_speed = 1 ;
+	image_speed = 1 * oGame.game_speed ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -10;
 	energy = energy - 2 ;		//消耗能量
@@ -111,8 +125,20 @@ if (collision_circle(x,y,26,oDead,true,true))
 }
 #endregion
 
-
+#region	//能量及速度控制
 energy = clamp(energy,0,12);
+if (instance_exists(oGame)){
+hsp = hsp * oGame.game_speed ;
+vsp = vsp * oGame.game_speed ;
+}
+#endregion
+
+#region //场景切换
+
+if (key_previous == 1 && room_previous(room) != room_first) room_goto_previous();
+if (key_next == 1 && room_next(room) != room_last) room_goto_next();
+
+#endregion
 
 #region //动画控制
 
@@ -123,30 +149,30 @@ if hascontrol{
 if (!place_meeting(x,y+1,oWall))
 {
 	sprite_index = sigma_jump_1_strip12;
-	if floor(image_index) == 9 image_speed = 0 ;	//在最舒展的时候停止动画
+	if floor(image_index) == 9 image_speed = 0 *oGame.game_speed;	//在最舒展的时候停止动画
 	
 }
 else
 {
 	if (sprite_index == sigma_jump_1_strip12) //落地
 	{
-		image_speed = 1;						//恢复动画播放
+		image_speed = 1*oGame.game_speed;						//恢复动画播放
 		if floor(image_index) == 11 image_speed = 0 ;	//到最后一帧后停止动画
 	}
 	if (abs(hsp) < 1)								//没有横向速度
 	{
-		image_speed = 1;						
+		image_speed = 1*oGame.game_speed;						
 		sprite_index = sigma_stop_strip16;		//设为静止动画
 	}
 	else if (abs(hsp) < 4 && abs(hsp) > 0)		//线性减速刹车动画
 	{
-		image_speed = 1;						
+		image_speed = 1*oGame.game_speed;						
 		sprite_index = sigma_break_strip12;
 		if floor(image_index) == 7 image_speed = 0 ;
 	}
 	else										//普通跑动
 	{
-		image_speed = 1;						
+		image_speed = 1*oGame.game_speed;						
 		sprite_index = sigma_run_strip8;
 	}
 	
