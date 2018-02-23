@@ -10,3 +10,5 @@ last_y = 0 ;
 
 game_speed = 1;
 
+preview = 0 ;
+

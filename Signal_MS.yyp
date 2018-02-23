@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "270f0d94-8ef5-4bb4-be0c-78994f634ded",
+            "Value": {
+                "id": "060fc87d-ef42-44fa-881d-d67ccb71de33",
+                "resourcePath": "objects\\o_plat\\o_plat.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "28cb0a34-b2c6-4c28-a651-cc0a4436d36d",
             "Value": {
                 "id": "ac46ff5f-caec-4798-a50e-b038001e4a1f",
@@ -276,6 +284,22 @@
                 "id": "03a9601d-e3f4-4a61-9662-16e9ca1dc2ed",
                 "resourcePath": "sprites\\bg4\\bg4.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "64261ee7-5764-47c6-8375-c0e4c2cbd200",
+            "Value": {
+                "id": "3281fabc-3a6f-49e2-a2e8-b8461d991392",
+                "resourcePath": "scripts\\tiles_collision\\tiles_collision.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6c7a08a8-715f-4ea4-b449-691599558262",
+            "Value": {
+                "id": "02c4dd1f-39f1-4d2a-a770-24f848313917",
+                "resourcePath": "rooms\\rThree\\rThree.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -567,6 +591,14 @@
             }
         },
         {
+            "Key": "c9c280e9-13eb-4c20-830d-738fc68f4dfe",
+            "Value": {
+                "id": "f57770c7-2e20-4e57-b662-9c8fc91ec4f5",
+                "resourcePath": "sprites\\s_plat\\s_plat.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cab40129-9f84-4f8e-a58e-763913c191fe",
             "Value": {
                 "id": "4840009b-0eb9-498c-9448-975ad93bc751",
@@ -703,6 +735,14 @@
             }
         },
         {
+            "Key": "f6fabeb4-7ed7-4d5d-8b26-f6c6e93b45a6",
+            "Value": {
+                "id": "aa567bc6-df5d-42ea-b890-3fc31c002a1b",
+                "resourcePath": "rooms\\rTwo\\rTwo.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "fd486597-7d11-4c82-9525-34e3b41a2f79",
             "Value": {
                 "id": "5b076ac9-79eb-4e7b-96c8-22509abc885c",
@@ -724,7 +764,8 @@
         "c3137f69-6673-46a6-9dd5-a076cad9b82f",
         "dfcf27b9-518d-4f97-8533-d562e98748a5",
         "b9499715-8c6a-4af3-b64d-70665e09f432",
-        "b6eb40e0-a655-4c32-94ff-3e7789490499"
+        "b6eb40e0-a655-4c32-94ff-3e7789490499",
+        "64261ee7-5764-47c6-8375-c0e4c2cbd200"
     ],
     "tutorial": ""
 }

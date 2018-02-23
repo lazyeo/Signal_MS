@@ -67,7 +67,7 @@ vsp = vsp + grv;
 //地面起跳
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
-	vsp = -7;
+	vsp = -8;
 	with(oGame){
 	last_x = other.x
 	last_y = other.y
@@ -116,9 +116,11 @@ if (place_meeting(x,y+vsp,oWall))
 
 }else collision_y  = 0 ;
 
+
+
 if collision_y {
 	vsp = 0;
-	energy = energy + 0.02	//缓慢恢复能量
+
 }
 
 y = y + vsp;
@@ -132,6 +134,12 @@ if (collision_circle(x,y,26,oDead,true,true))
 #endregion
 
 #region	//能量及速度控制
+if (place_meeting(x,y+1,oGround))
+{
+	energy = energy + 0.04;
+}
+
+
 energy = clamp(energy,0,12);
 if (instance_exists(oGame)){
 hsp = hsp * oGame.game_speed ;
@@ -141,12 +149,6 @@ vsp = vsp * oGame.game_speed ;
 //if (collision_x and collision_y) x = xprevious; y = yprevious;
 #endregion
 
-#region //场景切换
-
-if (key_previous == 1 && room_previous(room) != room_first) room_goto_previous();
-if (key_next == 1 && room_next(room) != room_last) room_goto_next();
-
-#endregion
 
 #region //动画控制
 
