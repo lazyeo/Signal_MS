@@ -10,5 +10,3 @@ shake_length = 0;
 shake_magnitude = 0;
 shake_remain = 0;
 
-pos_x = [512,1536,2560,3584]
-pos_y = [256,768]
