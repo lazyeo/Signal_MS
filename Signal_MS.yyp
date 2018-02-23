@@ -431,14 +431,6 @@
             }
         },
         {
-            "Key": "8427047f-9ef8-4c77-89f3-9c20623d07b6",
-            "Value": {
-                "id": "7ea808ec-0604-4423-86a6-cb5e154cfa9c",
-                "resourcePath": "options\\ios\\options_ios.yy",
-                "resourceType": "GMiOSOptions"
-            }
-        },
-        {
             "Key": "8427cfc6-c2f0-4fbb-aaf2-4a07495c2dcb",
             "Value": {
                 "id": "11e85941-6f42-45be-9bb6-41fb0d9e31b2",
@@ -535,6 +527,7 @@
             }
         },
         {
+<<<<<<< HEAD
             "Key": "a128950b-5063-4876-b4a6-b99dbd2ea6d1",
             "Value": {
                 "id": "54bf2d7c-9d70-4f1c-af87-d56c081ec51b",
@@ -551,6 +544,8 @@
             }
         },
         {
+=======
+>>>>>>> 0c72daf48b936967fa3479773e1fb57f4af29cae
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "bd363745-075c-4fdb-bf04-b3f4fa0bee16",
@@ -748,14 +743,6 @@
                 "id": "dee488ed-9136-4701-a9af-ad1a9d6c8f89",
                 "resourcePath": "scripts\\ScreenShake\\ScreenShake.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
-            "Value": {
-                "id": "e1979a97-25b9-4b61-af22-73af6fe8d23a",
-                "resourcePath": "options\\android\\options_android.yy",
-                "resourceType": "GMAndroidOptions"
             }
         },
         {
