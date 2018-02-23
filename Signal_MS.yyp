@@ -63,14 +63,6 @@
             }
         },
         {
-            "Key": "0a6699f6-2c8e-4877-92f4-12c69bd15c85",
-            "Value": {
-                "id": "8e824b05-e135-4411-9ac7-0f5bb3b84a3d",
-                "resourcePath": "objects\\o_move_safe_point\\o_move_safe_point.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "0bf01709-abf1-46da-b5b1-70bcef8a5e78",
             "Value": {
                 "id": "b1e4ba9b-cc2d-4438-b4e4-c234517aa047",
@@ -84,14 +76,6 @@
                 "id": "4d6aba7f-e626-4e06-ac9a-5d98ffa33004",
                 "resourcePath": "objects\\oPlayer\\oPlayer.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "0cd331b2-237f-4d8f-80a1-8b0f98be7478",
-            "Value": {
-                "id": "82af00aa-ff46-42e6-890b-f1c650ee7cb6",
-                "resourcePath": "sprites\\safe_point_move_left_strip11\\safe_point_move_left_strip11.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -132,22 +116,6 @@
                 "id": "26119f0d-4085-4aa3-9686-d81e51da8826",
                 "resourcePath": "scripts\\SlideTransition\\SlideTransition.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "20f534db-ae9e-410e-a5c7-928b9322707f",
-            "Value": {
-                "id": "4561beae-a91d-4e53-8331-1b7e5b7075e4",
-                "resourcePath": "rooms\\rTwo\\rTwo.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
-            "Key": "25008155-fbb7-4834-a6e9-36c313d5a673",
-            "Value": {
-                "id": "41d8bd32-948e-4ee0-ae97-c747be436348",
-                "resourcePath": "sprites\\safe_point_disappear__strip20\\safe_point_disappear__strip20.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -211,14 +179,6 @@
             "Value": {
                 "id": "f89647f8-d2ae-407a-b08a-c1f5df2f4c75",
                 "resourcePath": "views\\3ce317ee-2118-4d19-b4a0-727f90475eab.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "44d55b17-db14-4419-aad4-fa1aaeca5e75",
-            "Value": {
-                "id": "c45cfd2f-c6a5-4b6a-830d-44636d579314",
-                "resourcePath": "views\\44d55b17-db14-4419-aad4-fa1aaeca5e75.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -295,14 +255,6 @@
             }
         },
         {
-            "Key": "57f30130-bcd8-4b30-8421-9ebe32840c8d",
-            "Value": {
-                "id": "daaac2be-dcd2-467f-8017-11cc45760e2e",
-                "resourcePath": "rooms\\rThree\\rThree.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "5d32e822-bca9-4172-83ab-8f2a9574fa6f",
             "Value": {
                 "id": "140d2ff6-38f4-4c73-a6b0-fb80e9dab710",
@@ -343,11 +295,11 @@
             }
         },
         {
-            "Key": "678ebf9e-e5df-4ec3-ab16-49fb9fb5a2c6",
+            "Key": "6c7a08a8-715f-4ea4-b449-691599558262",
             "Value": {
-                "id": "408f725f-73ec-48e5-8600-23e242bbda20",
-                "resourcePath": "objects\\o_disapear_safe_point\\o_disapear_safe_point.yy",
-                "resourceType": "GMObject"
+                "id": "02c4dd1f-39f1-4d2a-a770-24f848313917",
+                "resourcePath": "rooms\\rThree\\rThree.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -380,14 +332,6 @@
                 "id": "1fb4e73e-a43f-4a4a-b7ad-49565a41afb2",
                 "resourcePath": "sprites\\s_tileset\\s_tileset.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "74da1735-433a-44c0-8d06-de394c5ff0af",
-            "Value": {
-                "id": "4f6d50e2-963a-4378-b877-d633732358b0",
-                "resourcePath": "objects\\o_energy_revive\\o_energy_revive.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -487,14 +431,6 @@
             }
         },
         {
-            "Key": "9540eb10-da31-494b-bf16-69950820adb8",
-            "Value": {
-                "id": "c411a09f-f8a5-40f1-bbde-3499e4ebeed0",
-                "resourcePath": "sprites\\s_noMask\\s_noMask.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "97c29bfa-5f0f-40c6-8efb-87921fce770f",
             "Value": {
                 "id": "775998b2-1b10-4cbb-981e-2e5cbf388bfb",
@@ -536,6 +472,7 @@
             }
         },
         {
+<<<<<<< HEAD
             "Key": "a2cd1e76-819d-4fe4-b603-b9900ff7a2ce",
             "Value": {
                 "id": "f05d7df1-7f9d-41e6-87a3-3fe9c6d2bc44",
@@ -546,6 +483,8 @@
         {
 =======
 >>>>>>> 0c72daf48b936967fa3479773e1fb57f4af29cae
+=======
+>>>>>>> parent of bc61f90... 修改镜头尺寸为1024*768
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "bd363745-075c-4fdb-bf04-b3f4fa0bee16",
@@ -794,11 +733,11 @@
             }
         },
         {
-            "Key": "f60b45a6-5cb5-4962-ad85-411904911f13",
+            "Key": "f6fabeb4-7ed7-4d5d-8b26-f6c6e93b45a6",
             "Value": {
-                "id": "076dc34e-6399-49e4-99b0-d3f5d87b0daf",
-                "resourcePath": "sprites\\safe_point_disappear__strip2\\safe_point_disappear__strip2.yy",
-                "resourceType": "GMSprite"
+                "id": "aa567bc6-df5d-42ea-b890-3fc31c002a1b",
+                "resourcePath": "rooms\\rTwo\\rTwo.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
