@@ -56,7 +56,7 @@ var move = key_right - key_left;
 if move == 0 
 {
 //线性减速
-	hsp = lerp(hsp,0,0.12)	
+	hsp = lerp(hsp,0,0.04)	
 } else 
 //横向移动
 hsp = hsp + walksp*move;
@@ -136,7 +136,7 @@ if (collision_circle(x,y,26,oDead,true,true))
 #region	//能量及速度控制
 if (place_meeting(x,y+1,oGround))
 {
-	energy = energy + 0.16;
+	energy = energy + 0.04;
 }
 
 
