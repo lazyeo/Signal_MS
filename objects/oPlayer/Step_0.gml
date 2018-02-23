@@ -67,7 +67,7 @@ vsp = vsp + grv;
 //地面起跳
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
-	vsp = -8;
+	vsp = -6;
 	with(oGame){
 	last_x = other.x
 	last_y = other.y
@@ -80,7 +80,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
 	image_speed = 1 * oGame.game_speed ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
-	vsp = -10;
+	vsp = -8;
 	energy = energy - 2 ;		//消耗能量
 	
 	//临时销毁跳跃点
@@ -174,7 +174,7 @@ else
 		image_speed = 1*oGame.game_speed;						
 		sprite_index = sigma_stop_strip16;		//设为静止动画
 	}
-	else if (abs(hsp) < 4 && abs(hsp) > 0)		//线性减速刹车动画
+	else if (abs(hsp) < 3.5 && abs(hsp) > 0)		//线性减速刹车动画
 	{
 		image_speed = 1*oGame.game_speed;						
 		sprite_index = sigma_break_strip12;
