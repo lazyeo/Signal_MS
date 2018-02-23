@@ -141,12 +141,6 @@ vsp = vsp * oGame.game_speed ;
 //if (collision_x and collision_y) x = xprevious; y = yprevious;
 #endregion
 
-#region //场景切换
-
-if (key_previous == 1 && room_previous(room) != room_first) room_goto_previous();
-if (key_next == 1 && room_next(room) != room_last) room_goto_next();
-
-#endregion
 
 #region //动画控制
 
