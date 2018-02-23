@@ -100,9 +100,9 @@ if (place_meeting(x+hsp,y,oWall))
 	{
 		x = x + sign(hsp);
 	}
-	hsp = 0;
-
-}
+	collision_x = 1;
+}else collision_x = 0 ;
+if collision_x hsp = 0 ;
 x = x + hsp;
 
 //纵向碰撞
@@ -112,9 +112,15 @@ if (place_meeting(x,y+vsp,oWall))
 	{
 		y = y + sign(vsp);
 	}
+	collision_y = 1;
+
+}else collision_y  = 0 ;
+
+if collision_y {
 	vsp = 0;
 	energy = energy + 0.02	//缓慢恢复能量
 }
+
 y = y + vsp;
 
 //死亡碰撞检测
@@ -131,6 +137,8 @@ if (instance_exists(oGame)){
 hsp = hsp * oGame.game_speed ;
 vsp = vsp * oGame.game_speed ;
 }
+
+//if (collision_x and collision_y) x = xprevious; y = yprevious;
 #endregion
 
 #region //场景切换

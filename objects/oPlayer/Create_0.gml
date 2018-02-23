@@ -9,7 +9,12 @@ hascontrol = true;	//允许操作
 energy_max = 12;			//能量上限
 energy = energy_max ;		//跳跃能量
 
+collision_x = 0 ;	//横向碰撞
+collision_y = 0 ;	//纵向碰撞
+
 if (instance_exists(oGame)){
 	oGame.last_x = x
 	oGame.last_y = y
 }
+
+//instance_create_depth(x,y,depth,oBbox)
