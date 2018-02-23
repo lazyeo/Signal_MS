@@ -8,13 +8,13 @@ else if instance_exists(oPlayerRevive) follow = oPlayerRevive;	//无则找是否
 //有追踪目标则镜头目的坐标设为目标坐标
 if (instance_exists(follow))
 {
-	if follow.x < 960 xTo = 480;
-	else if follow.x < 1920 xTo = 1440;
-	else if follow.x < 2880 xTo = 2400;
-	else xTo = 3360;
+	if follow.x < 1024 xTo = 512;
+	else if follow.x < 2048 xTo = 1536;
+	else if follow.x < 3072 xTo = 2560;
+	else xTo = 3584;
 	
-	if follow.y < 540 yTo = 270;
-	else yTo = 810;
+	if follow.y < 768 yTo = 384;
+	else yTo = 1152;
 }
 
 //更新坐标
