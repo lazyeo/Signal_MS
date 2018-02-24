@@ -11,13 +11,13 @@ if(instance_exists(oPlayer)){
 if (oPlayer.key_previous == 1 && room_previous(room) != room_first) {
 	room_goto_previous();
 	room_switch = 1;
-	alarm[0] = 120;
+	alarm[0] = 30;
 
 }
 if (oPlayer.key_next == 1 && room != room_last) {
 	room_goto_next();
 	room_switch = 1;
-	alarm[0] = 120;
+	alarm[0] = 30;
 }
 
 if room_switch 	game_speed =  Approach(game_speed,slow_down,0.02);
