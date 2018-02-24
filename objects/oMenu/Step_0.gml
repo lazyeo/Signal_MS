@@ -9,12 +9,14 @@ if (menu_control)
 	{
 		menu_cursor++;
 		if (menu_cursor >= menu_items) menu_cursor = 0;
+		audio_play_sound(snd_select,1,0)
 	}
 
 	if (keyboard_check_pressed(vk_down) or gamepad_button_check_pressed(0,gp_padd))
 	{
 		menu_cursor--;
 		if (menu_cursor < 0) menu_cursor = menu_items-1;
+		audio_play_sound(snd_select,1,0)
 	}
 
 	if (keyboard_check_pressed(vk_enter) or gamepad_button_check_pressed(0,gp_face1))
@@ -23,7 +25,7 @@ if (menu_control)
 		menu_committed = menu_cursor;
 		ScreenShake(4,30);
 		menu_control = false;
-
+		audio_play_sound(snd_click,1,0)
 	}
 }
 
@@ -40,9 +42,9 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			}
 			else
 			{
-				var file = file_text_open_read(SAVEFILE);
-				var target = file_text_read_real(file);
-				file_text_close(file);
+				var file = ini_open(SAVEFILE);
+				var target = ini_read_real("Variables","room",rOne);
+				ini_close()
 				SlideTransition(TRANS_MODE.GOTO,target);
 			}
 		}

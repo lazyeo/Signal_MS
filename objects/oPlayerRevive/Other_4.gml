@@ -1,10 +1,17 @@
 /// @desc 自动存档
 
 //覆盖旧存档
-if (file_exists(SAVEFILE)) file_delete(SAVEFILE);
-
+if (file_exists(SAVEFILE))
+{
+	var file = ini_open(SAVEFILE)
+	x = ini_read_real("Variables", "pos_x",x);
+	y = ini_read_real("Variables", "pos_y",y);
+	file_delete(SAVEFILE);
+}
 //新建存档
 var file;
-file = file_text_open_write(SAVEFILE);
-file_text_write_real(file,room);	//记录当前关卡room id
-file_text_close(file);
+file = ini_open(SAVEFILE);
+ini_write_real("Variables", "room", room); 	//记录当前关卡room id
+ini_write_real("Variables", "pos_x",x);		//记录当前x坐标 
+ini_write_real("Variables", "pos_y",y);		//记录当前y坐标
+ini_close();
