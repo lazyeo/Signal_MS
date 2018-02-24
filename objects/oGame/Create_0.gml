@@ -7,19 +7,20 @@ if room == rMenu audio_sound_pitch(snd_delta,0.5);
 else audio_sound_pitch(snd_delta,1.5);
 */
 
-global.font_cn = font_add("pixel12.TTF",20,0,0,0,65535)
+global.font_cn = font_add("pixel12.TTF",20,0,0,0,65535)		//定义中文字体
 
 
-
-
-game_speed = 1;
+game_speed = 1;		//定义游戏速度
+slow_down = 0.2;
 
 preview = 0 ;
 
-show_debug_info = 1 ;
-show_help_info = 1 ;
+show_debug_info = 1 ;										//debug信息是否显示，0为关闭，1为开启
+show_help_info = 1 ;										//操作提示是否显示，0为关闭，1为开启
 
 
-//ds_map保存不同关卡重生点
+//创建两个ds_map保存不同关卡重生点坐标
 revive_pos_x = ds_map_create();
 revive_pos_y = ds_map_create();
+
+room_switch = 0						//是否刚刚切换场景

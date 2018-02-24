@@ -2,20 +2,36 @@
 // You can write your code in this editor
 display_set_gui_size(camera_get_view_width(view_camera[0]),camera_get_view_height(view_camera[0]));
 
+audio_sound_pitch(snd_delta,game_speed);
+
 if(instance_exists(oPlayer)){
 
 #region //场景切换
 
-if (oPlayer.key_previous == 1 && room_previous(room) != room_first) room_goto_previous();
-if (oPlayer.key_next == 1 && room != room_last) room_goto_next();
+if (oPlayer.key_previous == 1 && room_previous(room) != room_first) {
+	room_goto_previous();
+	room_switch = 1;
+	alarm[0] = 120;
+
+}
+if (oPlayer.key_next == 1 && room != room_last) {
+	room_goto_next();
+	room_switch = 1;
+	alarm[0] = 120;
+}
+
+if room_switch 	game_speed =  Approach(game_speed,slow_down,0.02);
+else game_speed =  Approach(game_speed,1,0.02);
+}
 
 #endregion
 
+/*
 
 #region //场景预览
 	preview_pre = keyboard_check(ord("Q"));
 	preview_nex = keyboard_check(ord("E"));
-/*
+
 	if (gamepad_button_check(0,gp_shoulderl))
 	{
 		preview_pre = 1;
@@ -25,7 +41,7 @@ if (oPlayer.key_next == 1 && room != room_last) room_goto_next();
 	{
 		preview_nex = 1;
 	}
-*/	
+	
 
 
 
@@ -59,4 +75,5 @@ else game_speed = game_speed + 0.02 ;
 
 game_speed = clamp(game_speed,0.2,1)
 }
+*/
 

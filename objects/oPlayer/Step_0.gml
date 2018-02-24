@@ -101,7 +101,7 @@ if (place_meeting(x+hsp,y,oWall))
 	collision_x = 1;
 }else collision_x = 0 ;
 if collision_x hsp = 0 ;
-x = x + hsp + ex_spd;
+x = x + (hsp + ex_spd) * oGame.game_speed;
 
 //纵向碰撞
 if (place_meeting(x,y+vsp,oWall))
@@ -121,7 +121,7 @@ if collision_y {
 
 }
 
-y = y + vsp;
+y = y + vsp * oGame.game_speed;
 
 //死亡碰撞检测
 if (collision_circle(x,y,26,oDead,true,true))
@@ -140,8 +140,8 @@ if (place_meeting(x,y+1,oGround))
 
 energy = clamp(energy,0,12);
 if (instance_exists(oGame)){
-hsp = hsp * oGame.game_speed ;
-vsp = vsp * oGame.game_speed ;
+hsp = hsp ;
+vsp = vsp ;
 }
 
 //if (collision_x and collision_y) x = xprevious; y = yprevious;
