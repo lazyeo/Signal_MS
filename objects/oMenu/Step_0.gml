@@ -42,9 +42,9 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 			}
 			else
 			{
-				var file = file_text_open_read(SAVEFILE);
-				var target = file_text_read_real(file);
-				file_text_close(file);
+				var file = ini_open(SAVEFILE);
+				var target = ini_read_real("Variables","room",rOne);
+				ini_close()
 				SlideTransition(TRANS_MODE.GOTO,target);
 			}
 		}
