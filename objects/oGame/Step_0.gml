@@ -4,8 +4,6 @@ display_set_gui_size(camera_get_view_width(view_camera[0]),camera_get_view_heigh
 
 if(instance_exists(oPlayer)){
 
-
-
 #region //场景切换
 
 if (oPlayer.key_previous == 1 && room_previous(room) != room_first) room_goto_previous();
@@ -61,3 +59,4 @@ else game_speed = game_speed + 0.02 ;
 
 game_speed = clamp(game_speed,0.2,1)
 }
+

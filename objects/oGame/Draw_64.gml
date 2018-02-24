@@ -12,9 +12,9 @@ draw_text(display_get_gui_width()-10,120,"F3 开启/关闭本操作提示")
 
 if(instance_exists(oPlayer) && show_debug_info ){
 draw_set_halign(fa_left)
-draw_text(10,40,"预览后"+string(preview_nex))
-draw_text(10,80,"预览前"+string(preview_pre))
-draw_text(10,120,"预览状态"+string(preview))
-draw_text(10,160,"碰撞"+"X:"+string(oPlayer.collision_x)+"Y:"+string(oPlayer.collision_y))
+draw_text(10,40,"重生坐标X"+string(ds_map_find_value(oGame.revive_pos_x,room)))
+draw_text(10,80,"重生坐标X"+string(ds_map_find_value(oGame.revive_pos_y,room)))
+draw_text(10,120,"  ")
+draw_text(10,160,"F2 开启/关闭Debug信息显示 ")
 
 }

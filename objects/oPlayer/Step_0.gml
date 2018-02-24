@@ -68,9 +68,8 @@ vsp = vsp + grv;
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -6;
-	room.last_x = other.x
-	room.last_y = other.y
-
+	ds_map_replace(oGame.revive_pos_x, room, x);
+	ds_map_replace(oGame.revive_pos_y, room, y);
 }
 
 //检测跳跃点碰撞起跳
