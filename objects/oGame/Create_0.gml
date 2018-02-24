@@ -17,3 +17,5 @@ game_speed = 1;
 
 preview = 0 ;
 
+show_debug_info = 0 ;
+show_help_info = 1 ;
