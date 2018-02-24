@@ -103,7 +103,7 @@ if (place_meeting(x+hsp,y,oWall))
 	collision_x = 1;
 }else collision_x = 0 ;
 if collision_x hsp = 0 ;
-x = x + hsp;
+x = x + hsp + ex_spd;
 
 //纵向碰撞
 if (place_meeting(x,y+vsp,oWall))

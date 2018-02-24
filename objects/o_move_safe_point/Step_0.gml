@@ -11,7 +11,9 @@ if move_dir {
 }
 
 if (place_meeting(x,y-1,oPlayer) ){
-	with(oPlayer){
-		x = x + other.move_spd*other.move_dir
+	with_move = 1
+}else with_move = 0 
+
+with(oPlayer){
+		ex_spd = other.move_spd*other.move_dir*other.with_move
 	}
-}
