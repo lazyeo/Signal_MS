@@ -94,7 +94,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 	image_speed = 1 * oGame.game_speed ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -9;
-	energy = energy - 2 ;		//消耗能量
+	energy = energy - 4 ;		//消耗能量
 	
 	//临时销毁跳跃点
 	instance_create_depth(jump_.x,jump_.y,jump_.depth,jump_shade);
