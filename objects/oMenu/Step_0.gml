@@ -33,17 +33,17 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 2: SlideTransition(TRANS_MODE.NEXT); break;
+		case 2: SlideTransition(TRANS_MODE.GOTO,rMiddle) ; break;
 		case 1: 
 		{
 			if (!file_exists(SAVEFILE))
 			{
-				SlideTransition(TRANS_MODE.NEXT); 
+				SlideTransition(TRANS_MODE.GOTO,rMiddle) 
 			}
 			else
 			{
 				var file = ini_open(SAVEFILE);
-				var target = ini_read_real("Variables","room",rOne);
+				var target = ini_read_real("Variables","room",rMiddle);
 				ini_close()
 				SlideTransition(TRANS_MODE.GOTO,target);
 			}

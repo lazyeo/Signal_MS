@@ -3,13 +3,13 @@
 image_speed = 0;
 
 switch room {
-	case rOne:
+	case rMiddle:
 	image_index = 0 ;
 	break
-	case rTwo:
+	case rPre_:
 	image_index = 1 ;
 	break
-	case rThree:
+	case rNext:
 	image_index = 2 ;
 	break
 }
