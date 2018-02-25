@@ -48,7 +48,7 @@ else
 }
 
 #endregion
-
+if (hascontrol){
 #region //移动
 
 var move = key_right - key_left;
@@ -104,7 +104,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 
 
 #endregion
-
+}
 #region //碰撞检测
 //横向碰撞
 if (place_meeting(x+hsp,y,oWall))
