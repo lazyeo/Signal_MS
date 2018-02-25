@@ -10,16 +10,17 @@ if (instance_exists(follow))
 {
 	if follow.x < 1024 xTo = 512;
 	else if follow.x < 2048 xTo = 1536;
-	else if follow.x < 3072 xTo = 2560;
-	else xTo = 3584;
+	else xTo = 2560;
+
 	
 	if follow.y < 768 yTo = 384;
-	else yTo = 1152;
+	else if follow.y < 1536 yTo = 1152;
+	else  yTo = 1920;
 }
 
 //更新坐标
-x += (xTo - x) / 15;
-y += (yTo - y) / 15;
+x += (xTo - x) / 12;
+y += (yTo - y) / 12;
 
 
 //保证镜头在视野中央room
@@ -35,7 +36,7 @@ shake_remain = max(0,shake_remain-((1/shake_length)*shake_magnitude));
 //更新镜头坐标属性
 camera_set_view_pos(cam,x-view_w_half,y-view_h_half);
 
-
+/*
 //视差滚动背景与镜头的关系
 if (layer_exists("bg1"))
 {
@@ -55,4 +56,4 @@ if (layer_exists("bg4"))
 {
 	layer_x("bg4",x/3);
 }
-
+*/
