@@ -20,9 +20,6 @@ if (oPlayer.key_next == 1 && room != room_last) {
 	alarm[0] = 30;
 }
 
-if room_switch 	game_speed =  Approach(game_speed,slow_down,0.02);
-else game_speed =  Approach(game_speed,1,0.02);
-
 
 #endregion
 
