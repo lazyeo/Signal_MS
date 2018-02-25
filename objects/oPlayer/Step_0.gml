@@ -64,10 +64,25 @@ hsp = clamp(hsp,-sp_max,sp_max);
 //纵向移动
 vsp = vsp + grv;
 
+//预览状态角色漂浮
+/*if (gamepad_button_check(0,gp_shoulderlb))
+{
+	grv = 0;
+	vsp = 0;
+}else
+	grv = 0.3;
+	
+if (gamepad_button_check(0,gp_shoulderrb))
+{
+	grv = 0;
+	vsp = 0;
+}else
+	grv = 0.3;*/
+
 //地面起跳
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
-	vsp = -6;
+	vsp = -8;
 	ds_map_replace(oGame.revive_pos_x, room, x);
 	ds_map_replace(oGame.revive_pos_y, room, y);
 }
@@ -78,7 +93,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 {
 	image_speed = 1 * oGame.game_speed ;
 	var jump_ = instance_nearest(x,y,oJumpPoint)
-	vsp = -8;
+	vsp = -9;
 	energy = energy - 2 ;		//消耗能量
 	
 	//临时销毁跳跃点
