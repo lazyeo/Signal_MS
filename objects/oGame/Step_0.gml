@@ -73,5 +73,5 @@ if ( abs(preview_pre-preview_nex)){
 
 }
 
-if (gamepad_button_check_pressed(0,gp_start))	room_goto(room_first);
-if (gamepad_button_check_pressed(0,gp_select))	game_restart();
+
+if (keyboard_check_pressed(vk_escape) ||gamepad_button_check_pressed(0,gp_start))	game_restart();

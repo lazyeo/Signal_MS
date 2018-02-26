@@ -145,7 +145,7 @@ if (collision_circle(x,y,26,oDead,true,true))
 	instance_destroy();
 }
 //卡墙死亡
-if (collision_rectangle(x-12,y-26,x+12,y+26,oWall,true,true))
+if (collision_rectangle(x-12,y-25,x+12,y+25,oWall,true,true) && oGame.preview == 0)
 {
 	instance_create_depth(x,y,depth,oPlayerDie);
 	instance_destroy();

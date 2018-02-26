@@ -13,7 +13,7 @@ if(show_help_info){
 }
 
 //Debug信息
-if( show_debug_info ){
+if( instance_exists(o_move_safe_point) &&show_debug_info ){
 	var file = ini_open(SAVEFILE);
 	var target = ini_read_real("Variables","room",rPre_);
 	var x_ = ini_read_real("Variables","pos_x",1)
@@ -22,7 +22,7 @@ if( show_debug_info ){
 	draw_set_halign(fa_left)
 	draw_text(10,40,"存档房间"+string(target));
 	draw_text(10,80,"存档坐标"+string(x_)+"+"+string(y_));
-	draw_text(10,120,"F2 开启/关闭Debug信息");
+	draw_text(10,120,"withMove"+string(o_move_safe_point.with_move));
 
 
 }
