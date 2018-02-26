@@ -83,7 +83,7 @@ if (gamepad_button_check(0,gp_shoulderrb))
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -8;
-	if(instance_exists(oSavePoint)){
+	if(instance_exists(oSavePoint) && place_meeting(x,y+1,oGround)){
 	oSavePoint.last_room = room ;
 	oSavePoint.last_x = x ;
 	oSavePoint.last_y = y;
