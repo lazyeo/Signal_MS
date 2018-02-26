@@ -144,6 +144,12 @@ if (collision_circle(x,y,26,oDead,true,true))
 	instance_create_depth(x,y,depth,oPlayerDie);
 	instance_destroy();
 }
+//卡墙死亡
+if (collision_rectangle(x-14,y-26,x+12,y+27,oWall,true,true))
+{
+	instance_create_depth(x,y,depth,oPlayerDie);
+	instance_destroy();
+}
 #endregion
 
 #region	//能量及速度控制
