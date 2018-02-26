@@ -49,14 +49,14 @@ if ((oPlayer.key_previous - oPlayer.key_next) != 0 ){
 	}
 
 if !preview room_pre_ = room;	//非预览状态保存当前room为预览回切room
-if (oPlayer.hsp==0 && oPlayer.vsp==0 )	//当玩家完全静止时才可进行预览操作
+if (abs(oPlayer.hsp) <= 1 && oPlayer.vsp==0 && oPlayer.onGround)	//当玩家完全静止时才可进行预览操作
 //判断是否按下预览按键
 if ( abs(preview_pre-preview_nex)){
 	//设置玩家角色透明度并禁止操作
 	oPlayer.hascontrol = 0 ;
 	oPlayer.image_alpha = 0.3;
 	oPlayer.ex_spd = 0 ;
-
+	oPlayer.hsp = 0;
 	//判断当前room及按键执行预览操作
 	if ( preview_pre && room_previous(room) != room_first) room_goto_previous()
 	if ( preview_nex  && room != room_last) room_goto_next()

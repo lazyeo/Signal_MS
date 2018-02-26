@@ -13,6 +13,7 @@ energy = energy_max ;		//跳跃能量
 collision_x = 0 ;	//横向碰撞
 collision_y = 0 ;	//纵向碰撞
 
+onGround = 0 ;		//在普通地面上
 
 if(instance_exists(oSavePoint)){
 	oSavePoint.last_room = room ;

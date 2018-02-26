@@ -12,7 +12,7 @@ if move_dir {
 	sprite_index = safe_point_move_left_strip11;
 }
 
-if (place_meeting(x,y-1,oPlayer) ){
+if (place_meeting(x,y-1,oPlayer) && oGame.preview == 0 ){
 	with_move = 1
 }else with_move = 0 
 
