@@ -13,10 +13,10 @@ draw_text(display_get_gui_width()-10,120,"F3 开启/关闭本操作提示")
 }
 
 //Debug信息
-if(instance_exists(oPlayer) && show_debug_info ){
+if( show_debug_info ){
 draw_set_halign(fa_left)
-draw_text(10,40,"镜头坐标"+string(oCamera.x)+"+"+string(oCamera.y));
-draw_text(10,80,"玩家坐标"+ string(oPlayer.x)+"+"+string(oPlayer.y));
+draw_text(10,40,"重生坐标"+string(oSavePoint.last_x)+"+"+string(oSavePoint.last_y));
+
 draw_text(10,120,"F2 开启/关闭Debug信息");
 
 

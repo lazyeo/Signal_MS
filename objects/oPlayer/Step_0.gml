@@ -83,8 +83,11 @@ if (gamepad_button_check(0,gp_shoulderrb))
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -8;
-	ds_map_replace(oGame.revive_pos_x, room, x);
-	ds_map_replace(oGame.revive_pos_y, room, y);
+	if(instance_exists(oSavePoint)){
+	oSavePoint.last_room = room ;
+	oSavePoint.last_x = x ;
+	oSavePoint.last_y = y;
+	}
 }
 
 //检测跳跃点碰撞起跳

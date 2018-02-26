@@ -927,6 +927,14 @@
             }
         },
         {
+            "Key": "f458023d-204f-4299-93f7-471a7fea9d9e",
+            "Value": {
+                "id": "c4d1a475-1f16-4044-8e0c-0716d1f58a01",
+                "resourcePath": "objects\\oSavePoint\\oSavePoint.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f60b45a6-5cb5-4962-ad85-411904911f13",
             "Value": {
                 "id": "076dc34e-6399-49e4-99b0-d3f5d87b0daf",

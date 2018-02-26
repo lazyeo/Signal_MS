@@ -20,9 +20,10 @@ preview = 0 ;		//是否开启预览模式0为否，1为开启
 show_debug_info = 1 ;										//debug信息是否显示，0为关闭，1为开启
 show_help_info = 1 ;										//操作提示是否显示，0为关闭，1为开启
 
-
+/*
 //创建两个ds_map保存不同关卡重生点坐标
 revive_pos_x = ds_map_create();
 revive_pos_y = ds_map_create();
+*/
 
 room_switch = 0						//是否刚刚切换场景

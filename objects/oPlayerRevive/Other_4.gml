@@ -1,5 +1,10 @@
 /// @desc 自动存档
-
+if (instance_exists(oSavePoint)){
+	if (oSavePoint.last_x != 0 && oSavePoint.last_y != 0 ){
+		x = oSavePoint.last_x;
+		y = oSavePoint.last_y;
+	}
+}
 //覆盖旧存档
 if (file_exists(SAVEFILE))
 {

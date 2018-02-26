@@ -14,5 +14,9 @@ collision_x = 0 ;	//横向碰撞
 collision_y = 0 ;	//纵向碰撞
 
 
-
+if(instance_exists(oSavePoint)){
+	oSavePoint.last_room = room ;
+	oSavePoint.last_x = x ;
+	oSavePoint.last_y = y;
+	}
 //instance_create_depth(x,y,depth,oBbox)
