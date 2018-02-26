@@ -33,22 +33,27 @@ if (menu_x > gui_width+150) && (menu_committed != -1)
 {
 	switch (menu_committed)
 	{
-		case 2: SlideTransition(TRANS_MODE.GOTO,rMiddle) ; break;
+		case 2: 
+		SlideTransition(TRANS_MODE.GOTO,rMiddle) ; 
+		break;
 		case 1: 
 		{
 			if (!file_exists(SAVEFILE))
 			{
-				SlideTransition(TRANS_MODE.GOTO,rMiddle) 
+				SlideTransition(TRANS_MODE.GOTO,rMiddle);
 			}
 			else
 			{
+				oSavePoint.need_revive = 1;
 				var file = ini_open(SAVEFILE);
 				var target = ini_read_real("Variables","room",rMiddle);
-				ini_close()
 				SlideTransition(TRANS_MODE.GOTO,target);
+				ini_close()
 			}
 		}
 		break;
-		case 0: game_end(); break;
+		case 0: 
+		game_end(); 
+		break;
 	}
 }

@@ -72,3 +72,6 @@ if ( abs(preview_pre-preview_nex)){
 #endregion
 
 }
+
+if (gamepad_button_check_pressed(0,gp_start))	room_goto(room_first);
+if (gamepad_button_check_pressed(0,gp_select))	game_restart();
