@@ -107,7 +107,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 
 
 #endregion
-}
+
 #region //碰撞检测
 //横向碰撞
 if (place_meeting(x+hsp,y,oWall))
@@ -165,6 +165,8 @@ vsp = vsp ;
 //if (collision_x and collision_y) x = xprevious; y = yprevious;
 #endregion
 
+
+}
 
 #region //动画控制
 
