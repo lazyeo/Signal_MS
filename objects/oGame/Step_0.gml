@@ -19,17 +19,12 @@ if(instance_exists(oPlayer)){
 
 #region //场景切换
 
-if (oPlayer.key_previous == 1 && room_previous(room) != room_first) {
-	room_goto_previous();
+if ((oPlayer.key_previous - oPlayer.key_next) != 0 ){
 	room_switch = 1;
 	oPlayer.ex_spd = 0 ;
 	alarm[0] = 30;
-
-}
-if (oPlayer.key_next == 1 && room != room_last) {
-	room_goto_next();
-	room_switch = 1;
-	alarm[0] = 30;
+	if (room_previous(room) != room_first && oPlayer.key_previous) room_goto_previous();
+	else if ((room != room_last) && oPlayer.key_next) room_goto_next();
 }
 
 

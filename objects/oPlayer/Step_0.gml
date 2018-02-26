@@ -83,10 +83,12 @@ if (gamepad_button_check(0,gp_shoulderrb))
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -8;
+	/*
 	if(instance_exists(oSavePoint) && place_meeting(x,y+1,oGround)){
 	oSavePoint.last_room = room ;
 	oSavePoint.last_x = x ;
 	oSavePoint.last_y = y;
+	*/
 	}
 }
 
@@ -152,7 +154,12 @@ if (collision_circle(x,y,26,oDead,true,true))
 #region	//能量及速度控制
 if (place_meeting(x,y+1,oGround))
 {
+	var oG_ = instance_nearest(x,y,oGround)
 	energy = energy + 0.16;
+	if(instance_exists(oSavePoint)){
+		oSavePoint.last_room = room ;
+		oSavePoint.last_x = (x+oG_.x)/2 ;
+		oSavePoint.last_y = oG_.y - 64;
 }
 
 
