@@ -4,6 +4,17 @@ display_set_gui_size(camera_get_view_width(view_camera[0]),camera_get_view_heigh
 
 audio_sound_pitch(snd_delta,game_speed);	//通过游戏速度来控制BGM音调变化
 
+var gp_anykey = gamepad_button_check_pressed(0,gp_face1) ||
+				gamepad_button_check_pressed(0,gp_face2) ||
+				gamepad_button_check_pressed(0,gp_face3) ||
+				gamepad_button_check_pressed(0,gp_face4) ||
+				gamepad_button_check_pressed(0,gp_padd) ||
+				gamepad_button_check_pressed(0,gp_padl) ||
+				gamepad_button_check_pressed(0,gp_padr) ||
+				gamepad_button_check_pressed(0,gp_padu) ||
+				gamepad_button_check_pressed(0,gp_shoulderl) ||
+				gamepad_button_check_pressed(0,gp_shoulderr) ;
+
 if(instance_exists(oPlayer)){
 
 #region //场景切换
@@ -55,7 +66,7 @@ if ( abs(preview_pre-preview_nex)){
 	if ( preview_nex  && room != room_last) room_goto_next()
 	//将状态设为开启预览
 	preview = 1 ;
-}else if (preview && keyboard_check_pressed(vk_anykey)) {
+}else if (preview && (keyboard_check_pressed(vk_anykey) || gp_anykey)) {
 	 room_goto(room_pre_);	//在预览状态松开按键则回预览前room
 	//重置玩家状态
 	oPlayer.image_alpha = 1;	
