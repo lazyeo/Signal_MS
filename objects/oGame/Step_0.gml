@@ -11,6 +11,7 @@ if(instance_exists(oPlayer)){
 if (oPlayer.key_previous == 1 && room_previous(room) != room_first) {
 	room_goto_previous();
 	room_switch = 1;
+	oPlayer.ex_spd = 0 ;
 	alarm[0] = 30;
 
 }
