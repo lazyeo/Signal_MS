@@ -28,6 +28,22 @@ else {
 //自定义绘制矩形的脚本
 draw_rectangle_custom(x,y,307*draw_energy/oPlayer.energy_max,18,1,false)
 
+//根据所在room绘制指示条
+draw_set_color($F7E8CB)
+switch room{
+	case rPre_ :
+	draw_rectangle_custom(x+48,y-12,70,7,1,false)
+	break;
+	case rMiddle :
+	draw_rectangle_custom(x+118,y-12,70,7,1,false)
+	break;
+	case rNext :
+	draw_rectangle_custom(x+188,y-12,70,7,1,false)
+	break;
+	case rMenu :
+	break;
+}
+
 //透明度及颜色复位
 draw_set_alpha(1)
 draw_set_color(c_white)
