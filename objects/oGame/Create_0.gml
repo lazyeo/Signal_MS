@@ -17,7 +17,7 @@ room_pre_ = noone;	//预览前场景
 
 preview = 0 ;		//是否开启预览模式0为否，1为开启
 
-show_debug_info = 1 ;										//debug信息是否显示，0为关闭，1为开启
+show_debug_info = 0 ;										//debug信息是否显示，0为关闭，1为开启
 show_help_info = 1 ;										//操作提示是否显示，0为关闭，1为开启
 
 /*

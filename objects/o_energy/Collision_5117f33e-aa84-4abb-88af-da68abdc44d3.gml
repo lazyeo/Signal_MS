@@ -5,4 +5,5 @@ with(oPlayer) {
 	energy = clamp(energy,0,12)
 	};
 instance_create_depth(x,y,depth,o_energy_revive)
+audio_play_sound(snd_energy,1,0)
 instance_destroy(self);

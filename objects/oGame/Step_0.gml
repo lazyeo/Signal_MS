@@ -76,3 +76,6 @@ if ( abs(preview_pre-preview_nex)){
 
 
 if (keyboard_check_pressed(vk_escape) ||gamepad_button_check_pressed(0,gp_start))	game_restart();
+
+//调节跳跃音效
+audio_sound_set_track_position(snd_jump, 0.1);
