@@ -12,8 +12,8 @@ var gp_anykey = gamepad_button_check_pressed(0,gp_face1) ||
 				gamepad_button_check_pressed(0,gp_padl) ||
 				gamepad_button_check_pressed(0,gp_padr) ||
 				gamepad_button_check_pressed(0,gp_padu) ||
-				gamepad_button_check_pressed(0,gp_shoulderl) ||
-				gamepad_button_check_pressed(0,gp_shoulderr) ;
+				gamepad_button_check_pressed(0,gp_shoulderlb) ||
+				gamepad_button_check_pressed(0,gp_shoulderrb) ;
 
 if(instance_exists(oPlayer)){
 
@@ -23,6 +23,7 @@ if ((oPlayer.key_previous - oPlayer.key_next) != 0 ){
 	room_switch = 1;
 	oPlayer.ex_spd = 0 ;
 	alarm[0] = 30;
+	audio_play_sound(snd_switch_room,1,0);
 	if (room_previous(room) != room_first && oPlayer.key_previous) room_goto_previous();
 	else if ((room != room_last) && oPlayer.key_next) room_goto_next();
 }
@@ -34,16 +35,16 @@ if ((oPlayer.key_previous - oPlayer.key_next) != 0 ){
 
 #region //场景预览
 
-	preview_pre = keyboard_check_pressed(ord("Q"));
-	preview_nex = keyboard_check_pressed(ord("E"));
+	preview_pre = keyboard_check_pressed(ord("A"));
+	preview_nex = keyboard_check_pressed(ord("D"));
 
 
-	if (gamepad_button_check_pressed(0,gp_shoulderlb))
+	if (gamepad_button_check_pressed(0,gp_shoulderl))
 	{
 		preview_pre = 1;
 	}
 	
-	if (gamepad_button_check_pressed(0,gp_shoulderrb))
+	if (gamepad_button_check_pressed(0,gp_shoulderr))
 	{
 		preview_nex = 1;
 	}

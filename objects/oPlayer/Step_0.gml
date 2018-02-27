@@ -5,9 +5,9 @@ if (hascontrol)
 	//检测键盘输入
 	key_left = keyboard_check(vk_left);
 	key_right = keyboard_check(vk_right);
-	key_jump = keyboard_check_pressed(vk_space); 
-	key_previous = keyboard_check_pressed(ord("A"));
-	key_next = keyboard_check_pressed(ord("D"))
+	key_jump = keyboard_check_pressed(ord("X")); 
+	key_previous = keyboard_check_pressed(ord("Z"));
+	key_next = keyboard_check_pressed(ord("C"))
 
 	if (key_left) || (key_right) || (key_jump)
 	{
@@ -27,13 +27,13 @@ if (hascontrol)
 		controller = 1;
 	}
 	
-	if (gamepad_button_check_pressed(0,gp_shoulderl))
+	if (gamepad_button_check_pressed(0,gp_shoulderlb))
 	{
 		key_previous = 1;
 		controller = 1;
 	}
 	
-	if (gamepad_button_check_pressed(0,gp_shoulderr))
+	if (gamepad_button_check_pressed(0,gp_shoulderrb))
 	{
 		key_next = 1;
 		controller = 1;
@@ -83,7 +83,7 @@ if (gamepad_button_check(0,gp_shoulderrb))
 if (place_meeting(x,y+1,oWall)) && (key_jump)
 {
 	vsp = -8;
-
+	audio_play_sound(snd_jump,1,0)
 	}
 }
 
@@ -95,7 +95,7 @@ if (collision_circle(x,y,28,oJumpPoint,true,true)) && (key_jump)
 	var jump_ = instance_nearest(x,y,oJumpPoint)
 	vsp = -9;
 	energy = energy - 4 ;		//消耗能量
-	
+	audio_play_sound(snd_jump,1,0)
 	//临时销毁跳跃点
 	instance_create_depth(jump_.x,jump_.y,jump_.depth,jump_shade);
 	instance_destroy(jump_)
@@ -143,12 +143,14 @@ if (collision_circle(x,y,26,oDead,true,true))
 {
 	instance_create_depth(x,y,depth,oPlayerDie);
 	instance_destroy();
+	audio_play_sound(snd_revive,1,0)
 }
 //卡墙死亡
 if (collision_rectangle(x-12,y-25,x+12,y+25,oWall,true,true) && oGame.preview == 0)
 {
 	instance_create_depth(x,y,depth,oPlayerDie);
 	instance_destroy();
+	audio_play_sound(snd_revive,1,0)
 }
 #endregion
 

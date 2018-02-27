@@ -4,6 +4,7 @@
 move_dir = 1 ;	//0向右，1向左
 move_spd_set = 3  ;	//移动速度
 move_dis = 210 ;//移动距离
+with_move = 0 ;
 
 start_x = x;
 start_y = y;

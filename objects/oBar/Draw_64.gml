@@ -14,6 +14,7 @@ if(!instance_exists(oPlayer))
 //定义绘制能量的数值线性变换
 draw_energy = lerp(draw_energy,oPlayer.energy,0.25);
 
+draw_energy = clamp(draw_energy,0,12);
 
 //如果能量大于总量的1/3，则显示$71CBBC颜色（BGR，与传统的RGB色值相反）
 if (oPlayer.energy > oPlayer.energy_max/3)	draw_set_color($71CBBC);

@@ -22,7 +22,7 @@ if( instance_exists(o_move_safe_point) &&show_debug_info ){
 	draw_set_halign(fa_left)
 	draw_text(10,40,"存档房间"+string(target));
 	draw_text(10,80,"存档坐标"+string(x_)+"+"+string(y_));
-	draw_text(10,120,"withMove"+string(o_move_safe_point.with_move));
+
 
 
 }
